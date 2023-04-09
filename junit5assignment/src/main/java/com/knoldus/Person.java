@@ -19,6 +19,9 @@ public class Person
     }
 
     public void setAge(Integer age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Age cannot be negative");
+        }
         this.age = age;
     }
 
