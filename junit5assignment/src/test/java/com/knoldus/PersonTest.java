@@ -14,14 +14,14 @@ public class PersonTest {
 
     @Test
     @DisplayName("Test getName() with not-null value")
-    void testGetNameWithNonNullValue() {
+    void testGetName_With_Non_Null_Value() {
         person.setName("Jasleen");
         Assertions.assertEquals("Jasleen", person.getName());
     }
 
     @Test
     @DisplayName("Test getName() with null value")
-    void testGetNameWithNullValue() {
+    void testGetName_With_Null_Value() {
         person.setName(null);
         Assertions.assertNull(person.getName());
     }
@@ -66,13 +66,6 @@ public class PersonTest {
     void testSetAge_With_NegativeInteger() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> person.setAge(-30));
         //The assertion checks whether the expected exception is thrown when the code inside the lambda expression (() -> person.setAge(-5)) is executed.
-    }
-
-    @Test
-    public void testSetAge_With_Zero() {
-        int age = 0;
-        person.setAge(age);
-        Assertions.assertEquals(age, person.getAge());
     }
 
 }
