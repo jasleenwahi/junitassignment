@@ -66,5 +66,9 @@ public class PersonTest {
     void testSetAge_With_NegativeInteger() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> person.setAge(-30));
     }
-
+    
+    @AfterEach
+    public void teardown() {
+         System.out.println("called after every test");
+    }
 }
