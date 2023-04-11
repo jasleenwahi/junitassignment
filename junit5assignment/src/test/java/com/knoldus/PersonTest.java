@@ -65,7 +65,6 @@ public class PersonTest {
     @DisplayName("Test setAge() with negative integer")
     void testSetAge_With_NegativeInteger() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> person.setAge(-30));
-        //The assertion checks whether the expected exception is thrown when the code inside the lambda expression (() -> person.setAge(-5)) is executed.
     }
 
 }
