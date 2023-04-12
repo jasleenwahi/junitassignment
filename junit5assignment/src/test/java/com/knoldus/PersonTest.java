@@ -14,56 +14,56 @@ public class PersonTest {
 
     @Test
     @DisplayName("Test getName() with not-null value")
-    void testGetName_With_Non_Null_Value_Should_Return_Name() {
+    void testGetName_WithNonNullValue_ShouldReturnName() {
         person.setName("Jasleen");
         Assertions.assertEquals("Jasleen", person.getName());
     }
 
     @Test
     @DisplayName("Test getName() with null value")
-    void testGetName_With_Null_Value_Should_Return_Null() {
+    void testGetName_WithNullValue_ShouldReturnNull() {
         person.setName(null);
         Assertions.assertNull(person.getName());
     }
 
     @Test
     @DisplayName("Test getAge() with not-null value")
-    void testGetAge_With_Non_Null_Value_Should_Return_Age() {
+    void testGetAge_WithNonNullValue_ShouldReturnAge() {
         person.setAge(25);
         Assertions.assertEquals(25, person.getAge());
     }
 
     @Test
     @DisplayName("Test getAge() with null value")
-    void testGetAge_With_Null_Value_Should_Return_Zero() {
+    void testGetAge_WithNullValue_ShouldReturnZero() {
         person.setAge(0);
         Assertions.assertEquals(0, person.getAge());
     }
     
     @Test
     @DisplayName("Test getEmail() with not-null value")
-    void testGetEmail_With_Non_Null_Value_Should_Return_Email() {
+    void testGetEmail_WithNonNullValue_ShouldReturnEmail() {
         person.setEmail("Jasleen.kaur@test.com");
         Assertions.assertEquals("Jasleen.kaur@test.com", person.getEmail());
     }
 
     @Test
     @DisplayName("Test getEmail() with null value")
-    void testGetEmail_With_Null_Value_Should_return_Null() {
+    void testGetEmail_WithNullValue_ShouldReturnNull() {
         person.setEmail(null);
         Assertions.assertNull(person.getEmail());
     }
 
     @Test
     @DisplayName("Test getEmail() if it is valid")
-    public void emailTest_Check_For_Validation_Should_Return_True(){
+    public void emailTestCheck_ForValidation_ShouldReturnTrue(){
         String email = person.getEmail();
         assertTrue(email.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"));
     }
     
     @Test
     @DisplayName("Test setAge() with negative integer")
-    void testSetAge_With_NegativeInteger_Should_Throw_An_Exception() {
+    void testSetAge_WithNegativeInteger_ShouldThrowAnException() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> person.setAge(-30));
     }
     
