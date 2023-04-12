@@ -14,7 +14,7 @@ public class StringUtilsTest
 
     // testing reverse method with non empty string.
     @Test
-    public void testReverse_The_String_With_NonEmpty_String()
+    public void testReverse_The_String_With_NonEmpty_String_Should_Return_Reversed_String()
     {
         String reversedString = stringUtils.reverse("hello");
         assertEquals("olleh", reversedString);
@@ -22,7 +22,7 @@ public class StringUtilsTest
 
     // testing reverse method with empty string.
     @Test
-    public void testReverse_The_String_With_Empty_String()
+    public void testReverse_The_String_With_Empty_String_Should_Return_Invalid_Input()
     {
         String reversedString = stringUtils.reverse("");
         assertEquals("Invalid input", reversedString);
@@ -30,35 +30,35 @@ public class StringUtilsTest
 
     // testing isEmpty method with non empty method.
     @Test
-    public void testCheck_If_String_Is_Empty_With_NonEmpty_String(){
+    public void testCheck_If_String_Is_Empty_With_NonEmpty_String_Should_Return_False(){
         Boolean emptyString = stringUtils.isEmpty1("hello");
         assertEquals(false, emptyString);
     }
 
     // testing isEmpty method with empty method.
     @Test
-    public void testCheck_If_Empty_With_Empty_String(){
+    public void testCheck_If_Empty_With_Empty_String_Should_Return_True(){
         Boolean emptyString = stringUtils.isEmpty1("");
         assertEquals(true, emptyString);
     }
 
     // testing isPalindrome method with palindrome string.
     @Test
-    public void testIs_Palindrome_With_Palindrome_String(){
+    public void testIs_Palindrome_With_Palindrome_String_Should_Return_True(){
         Boolean isPalindromeOrNot = stringUtils.isPalindrome("maam");
         assertEquals(true, isPalindromeOrNot);
     }
 
     // testing isPalindrome method with non-palindrome string.
     @Test
-    public void testIsPalindrome_With_Non_Palindrome_String(){
+    public void testIsPalindrome_With_Non_Palindrome_String_Should_Return_False(){
         Boolean isPalindromeOrNot = stringUtils.isPalindrome("jasleen");
         assertEquals(false, isPalindromeOrNot);
     }
 
     // testing isPalindrome method with empty strings.
     @Test
-    public void testIsPalindrome_Wirh_Empty_String(){
+    public void testIsPalindrome_Wirh_Empty_String_Should_Return_False(){
         Boolean isPalindromeOrNot = stringUtils.isPalindrome("");
         assertEquals(false, isPalindromeOrNot);
     }
